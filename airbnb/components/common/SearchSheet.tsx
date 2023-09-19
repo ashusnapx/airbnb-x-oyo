@@ -82,7 +82,7 @@ function SearchSheet({ session }: { session: any}) {
           
           </div>
         </SheetTrigger>
-        <SheetContent side="top" showCloseIcon={true}>
+        <SheetContent side="top" showCloseIcon={false}>
           <SheetHeader>
             <SheetTitle>
               <SearchSheetNav session={session} searchInputCallback={setSearch}/>

@@ -31,12 +31,17 @@ async function Navbar() {
                 {data?.session?.user?.email && (
                     <span className='hidden md:flex items-center justify-center border border-brand rounded-3xl p-2 space-x-2 text-sm hover:shadow-md'>
                         <span>{data?.session?.user?.user_metadata?.name}</span>
-                        <Image src={data?.session?.user?.user_metadata?.avatar_url } width={30} height={30} alt='user-image' className='rounded-full object-center'/>
-                        {/* <span>
-                            <LucideUserCheck2 className='text-brand' />
-                        </span> */}
+
+                        {data?.session?.user?.user_metadata?.avatar_url ? (
+                            <Image src={data?.session?.user?.user_metadata?.iss} width={30} height={30} alt='user-image' className='rounded-full object-center' />
+                        ) : (
+                            <span>
+                                <LucideUserCheck2 className='text-brand' />
+                            </span>
+                        )}
                     </span>
                 )}
+
 
                 <Link href="/addHome">
                     <span className='border rounded-3xl p-2 flex items-center justify-center text-sm cursor-pointer space-x-2 hover:shadow-lg'>
@@ -47,7 +52,7 @@ async function Navbar() {
                 
 
                 
-                <span className='cursor-pointer flex flex-row items-center justify-center space-x-2 border rounded-3xl p-2 ml-2 texy-sm hover:shadow-lg'>
+                <span className='cursor-pointer flex flex-row items-center justify-center space-x-2 border rounded-3xl p-2 ml-2 text-sm hover:shadow-lg'>
                     <NavMenu session={data?.session?.user}  />
                     <LucideSettings className='text-brand text-sm' />
                 </span>
