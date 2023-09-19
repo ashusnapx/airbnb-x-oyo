@@ -370,40 +370,10 @@ Supabase provides secure file storage capabilities. In the Airbnb Clone project,
    ```javascript
    const imageUrl = supabase.storage
      .from('public')
-     .getSignedUrl(imageData
-
-?.Key, new Date(), { expiresIn: 60 });
+     .getSignedUrl(imageData?.Key, new Date(), { expiresIn: 60 });
    ```
 
 ---
-
-## Conclusion
-
-By integrating Supabase into the Airbnb Clone project, we have established a secure and reliable backend system for user authentication, database management, and file storage. This approach enhances the scalability and robustness of the application, ensuring a seamless user experience.
-
-For further details and in-depth code examples, refer to the project's source code and documentation.
-
----
-
-This comprehensive guide covers the setup and integration of Supabase, user authentication, database management, and file storage in the Airbnb Clone project. It provides a detailed overview of each step along with relevant code snippets and explanations.
-
-
-
-## Data Flow Diagram
-
-![Data Flow Diagram](diagrams/data-flow-diagram.png)
-
-## Use Case Diagram
-
-![Use Case Diagram](diagrams/use-case-diagram.png)
-
-## U
-
-ML Diagram
-
-![UML Diagram](diagrams/uml-diagram.png)
-
-## Contributing
 
 Contributions are welcome! Please read the [Contributing Guidelines](CONTRIBUTING.md) for more details.
 
