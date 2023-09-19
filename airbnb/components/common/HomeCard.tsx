@@ -5,6 +5,7 @@ import { getS3ImageUrl } from '@/lib/utils'
 import { LucideBadgeIndianRupee, LucideIndianRupee } from 'lucide-react'
 
 function HomeCard({ home }: { home: any }) {
+  // console.log("this is olll", home);
   return (
     <Link href={`/home/${home.id}`}>
       <div>

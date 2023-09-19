@@ -13,7 +13,7 @@ export default async function Home({
   const supabase = createServerComponentClient({ cookies });
   const query = supabase
     .from("homes")
-    .select("id ,image ,title ,country ,city ,price , users (metadata->name)");
+    .select("id ,image,state ,title ,country ,city ,price , users (metadata->name)");
   if (searchParams?.country) {
     query.ilike("country", `%${searchParams?.country}%`);
   }
